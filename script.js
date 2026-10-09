@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleMenu() {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('open');
-    navOverlay.classList.toggle('open');
+    navOverlay.classList.toggle('active');
     document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   }
   if (hamburger) {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('active');
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
@@ -287,19 +287,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const filterTranslations = {
         tr: {
           all: "Tümü",
-          'kis-bahcesi': "Kış Bahçesi",
-          pergola: "Bioklimatik Pergola",
-          giyotin: "Giyotin Cam",
-          cephe: "Dış Cephe",
+          'cam-balkon': "Cam Balkon",
+          pergola: "Pergola",
+          cephe: "Cephe Giydirme",
+          dograma: "Alüminyum Doğrama",
           cam: "Cam İşleme",
           kaynak: "Kaynak"
         },
         en: {
           all: "All",
-          'kis-bahcesi': "Winter Garden",
-          pergola: "Bioclimatic Pergola",
-          giyotin: "Guillotine Glass",
-          cephe: "Facade Cladding",
+          'cam-balkon': "Glass Balcony",
+          pergola: "Pergola",
+          cephe: "Facade Systems",
+          dograma: "Aluminum Joinery",
           cam: "Glass Processing",
           kaynak: "Welding"
         }
